@@ -9,4 +9,8 @@ feature 'Viewing links' do
       expect(page).to have_content('Makers Academy')
     end
   end
+
+  scenario 'there are no links in the database at the start of the test' do
+    expect(Link.count).to eq 0
+  end
 end
