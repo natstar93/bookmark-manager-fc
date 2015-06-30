@@ -1,4 +1,6 @@
 require 'sinatra/base'
+require './app/models/link'
+require './app/data_mapper_setup.rb'
 
 class App < Sinatra::Base
   get '/links' do
