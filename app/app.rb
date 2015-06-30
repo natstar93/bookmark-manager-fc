@@ -20,4 +20,10 @@ class App < Sinatra::Base
   get '/links/new' do
     erb :new
   end
+
+  get '/tags/:name' do
+    tag = Tag.first(name: params[:name])
+    @links = tag ? tag.links : []
+    erb :index
+  end
 end
